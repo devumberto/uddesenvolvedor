@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favconicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>UD - Desenvolvedor</title>
+</head>
+
+<body>
+
+
+    <nav class="navegacao">
+
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Ínicio</a>
+            </li>
+
+            <li><a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+
+            <li><a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+
+            <li><a href="#contatos" class="menu-link">Contato</a>
+            </li>
+
+        </ul>
+    </nav>
+    <main id="inicio" class="cabecalho">
+
+        <img src="img/fotoperfil_02.png" alt="foto do Umberto" class="foto-perfil">
+        <h1>Umberto</h1>
+        <p class="cab.subtitulo">Desenvolvedor Front-end</p>
+
+        <ul class="icones-lista">
+            <li>
+                <img src="img/html5.png" alt="html5" class="icones">
+            </li>
+
+            <li>
+                <img src="img/css3.png" alt="CSS3" class="icones">
+            </li>
+
+            <li>
+                <img src="img/javinha.png" alt="JavaScript" class="icones">
+            </li>
+
+            <li>
+                <img src="img/type.png" alt="typescript" class="icones">
+            </li>
+
+            <li>
+                <img src="img/react.png" alt="react" class="icones">
+            </li>
+
+            <li>
+                <img src="img/node.png" alt="nodejs" class="icones">
+            </li>
+        </ul>
+
+
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Sou um profissional de Tecnologia da Informação com mais de 20 anos de
+                experiência na área de manutenção de computadores e redes, atuando na resolução de problemas técnicos,
+                suporte a usuários e implementação de soluções eficientes para ambientes corporativos.
+
+                Ao longo da minha trajetória, desenvolvi uma sólida base em infraestrutura de TI, o que hoje complementa
+                minha atuação como desenvolvedor Front-End. Atualmente, estou focado na criação de interfaces modernas,
+                responsivas e funcionais, utilizando tecnologias atualizadas do mercado.
+
+                Tenho grande interesse em evolução constante, buscando sempre aprimorar minhas habilidades em
+                desenvolvimento web e acompanhar as tendências tecnológicas. Minha experiência prática aliada à
+                capacidade de adaptação me permite entregar soluções que unem desempenho técnico e boa experiência do
+                usuário.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos e Clientes</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img src="img/flytecpng.png" alt="projeto 1" class="projetos-imagem">
+                <div class="paragrafo-texto-projetos">
+                    <div class="caixa-texto-projetos">
+                        <h3 class="info-projetos">Flytec - Manutenção</h3>
+                        <p class="paragrafo-projetos">Seguimento de TI na área manutenção de computadores, instalação...
+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="projetos-card">
+                <img src="img/projeto2.png" alt="projeto 2" class="projetos-imagem">
+                <div class="paragrafo-texto-projetos">
+                    <h3 class="info-projetos">Land Page</h3>
+                    <p class="paragrafos-projetos">Palestras, lançamentos de infoprodutos, mercado digital entre outros ..
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="projetos-card">
+                <img src="img/projeto3.png" alt="projeto 3" class="projetos-imagem">
+                <div class="paragrafo-texto-projetos">
+                    <h3 class="info-projetos">Página de Viagens</h3>
+                    <p class="paragrafos-projetos">Serviços de hotelaria, preços e reservas de quartos, tudo num só lugar ...</p>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+
+            <div class=" grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="6" id="mensagem"></textarea>
+
+            </div>
+            <button type="submit" class="botao-form">Enviar Whatsapp</button>
+        </form>
+
+    </section>
+    <section>
+        <a href="proj_client.html"><img src="img/seta.png" alt="projetos e clientes" class="pc-imagem"></a>
+    </section>
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome');
+            const mensagem = document.getElementById('mensagem');
+            const telefone = '5582981192340'
+
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = `https://wa.me/${telefone}/?t=${msgFormatada}`
+
+            window.open(url, '_blank')
+
+            consolo.log(url)
+        }
+    </script>
+    <footer>
+        <p>© 2026 UD - Desenvolvedor. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
